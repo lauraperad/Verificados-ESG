@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verificador ESG</title>
   <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
@@ -39,6 +40,36 @@
       <img src="{{ url_for('static', path='Sem-título-1.png') }}" alt="Imagem destaque">
     </div>
 
+=======
+  <title>Verificador ESG</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo LBCA" class="logo">
+
+    <div class="conteudo-esquerda">
+      <h1>Verificador - ESG</h1>
+      <p>
+        Para dar o primeiro passo em direção à conformidade ambiental, social e de governança (ESG) e às normas ISO, pedimos que você faça o upload do seu arquivo de projeto. Este processo simples e seguro é o ponto de partida para uma análise detalhada e abrangente.
+      </p>
+      
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="pergunta" placeholder="Faça sua pergunta:" required>
+        <input type="file" name="file" accept=".xlsx" required>
+        <button type="submit">Analisar</button>
+      </form>
+
+      <div class="rodape">
+        
+      </div>
+    </div>
+
+    <div class="imagem-direita">
+      <img src="{{ url_for('static', filename='Sem-título-1.png') }}" alt="Imagem destaque">
+    </div>
+    
+>>>>>>> 93d01f9460a0abc1840aedce750d4afc87da59d3
   </div>
 </body>
 </html>
