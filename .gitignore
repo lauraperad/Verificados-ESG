@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+app/uploads/*
+!app/uploads/cartilha_esg_assinada.pdf
+
+
+
+

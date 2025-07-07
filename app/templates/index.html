@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <title>ESG RAG Checker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador ESG</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
-<body style="font-family: Arial;">
-    <h2>Verificador ESG - Upload de Documento</h2>
-    <form action="/analisar" method="post" enctype="multipart/form-data">
-        <label for="pergunta">Pergunta:</label>
-        <input type="text" name="pergunta" required><br><br>
-        <label for="arquivo">Documento (.txt ou .pdf):</label>
-        <input type="file" name="arquivo" required><br><br>
-        <input type="submit" value="Analisar">
-    </form>
+<body>
+  <div class="container">
+
+    <!-- Logo -->
+    <img src="{{ url_for('static', path='logo.png') }}" alt="Logo LBCA" class="logo">
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo-esquerda">
+      <h1>Verificador - ESG</h1>
+      <p>
+        Para dar o primeiro passo em direção à conformidade ambiental, social e de governança (ESG) e às normas ISO,
+        pedimos que você faça o upload do seu arquivo de projeto. Este processo simples e seguro é o ponto de partida
+        para uma análise detalhada e abrangente.
+      </p>
+
+      <!-- Formulário de envio -->
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="pergunta" placeholder="Faça sua pergunta:" required>
+        <input type="file" name="arquivo" accept=".pdf,.xlsx" required>
+        <button type="submit">Analisar</button>
+      </form>
+
+      <!-- Rodapé -->
+      <div class="rodape">
+        <!-- Adicione conteúdo aqui se necessário -->
+      </div>
+    </div>
+
+    <!-- Imagem lateral -->
+    <div class="imagem-direita">
+      <img src="{{ url_for('static', path='Sem-título-1.png') }}" alt="Imagem destaque">
+    </div>
+
+  </div>
 </body>
 </html>
